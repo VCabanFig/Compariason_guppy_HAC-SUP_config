@@ -1,10 +1,11 @@
 # Compariason_guppy_HAC-SUP_config
 
 Job specifics: 
+```
 #$ -q gpu.q
 #$ -l gpu=1
 #$ -l cpu=2
-
+```
 
 Configuration files are locating within a data folder in Scicomp:
 /apps/x86_64/guppy/6.3.8-gpu/data/
@@ -15,10 +16,12 @@ Guppy version 6.3.8 was used.
 module load guppy/6.3.8-gpu
 
 The following command was used to basecall the fast5 files:
-
+```
 guppy_basecaller -i /scicomp/home-pure/ppn7/WORK/SUP_guppy_basecaller/fast5_pass/2023_03_17_MI_MinION/barcode01 -s /scicomp/groups/OID/NCEZID/DPEI/LPRB/BDRD/Mark_Itsko/PenResistance/2023_03_17_MI_MinION/basecalling_HAC/barcode01 --num_callers 14 --gpu_runners_per_device 8 --device cuda:0 --fast5_out --config /apps/x86_64/guppy/6.3.8-gpu/data/dna_r10.4_e8.1_hac.cfg 
-
+```
 The following command was used to time stamp: 
+
+```
 start=`date +%s`
 start_time=`date`
 ...
@@ -28,7 +31,7 @@ end=`date +%s`
 end_time=`date`
 runtime=$((end-start))
 echo "Runtime: $runtime"
-
+```
 
 
 
