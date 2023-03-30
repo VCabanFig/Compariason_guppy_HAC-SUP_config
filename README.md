@@ -38,14 +38,25 @@ runtime=$((end-start))
 echo "Runtime: $runtime"
 ```
 
-
-
 A PAF file was created using minimap2 and the mismatches between the sample and the pilon parent Sterne were extracter per sequence keeping the best match only, excluding the secondary possible matches. 
+
+To exclude the secondary possible matches the following flag was used in minimap: 
+```
+--secondary=no
+```
+
+minimap command used to creat PAF file with the column specifying mismatches from the sequence match: 
+
+```
+minimap2 -c -xmap-ont -t 12 --secondary=no /scicomp/groups/OID/NCEZID/DPEI/LPRB/BDRD/Passage_Strain_Analysis/Parent_Strains/pilon_assemblies/Sterne_pilon.fasta barcode01_ont_raw.fastq > /scicomp/groups/OID/NCEZID/DPEI/LPRB/BDRD/Mark_Itsko/PenResistance/2023_03_17_MI_MinION/SUP_SUP/alignments/barcode01_SUP_no_secondary.paf
+```
 
 
 PAF files were filtered to keep sequences that were found in both HAC/SUP configurations. 
 
 Resulting PAF Files were sorted by sequence ID to ensure that every line belonged to the same sequence.
+
+The 13th column was extracted which contains information regarding the mismatches in the sequence alignment. 
 
 
 
