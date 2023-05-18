@@ -59,7 +59,7 @@ Resulting PAF Files were sorted by sequence ID to ensure that every line belonge
 The 13th column was extracted which contains information regarding the mismatches in the sequence alignment. 
 
 
-###Reanalizing for 50X Coverage
+### Reanalizing for 50X Coverage
 
 Look at the number of SNPs and INDELs in each variant calls for it to be comparable with Heather P. McLaughlin
 
