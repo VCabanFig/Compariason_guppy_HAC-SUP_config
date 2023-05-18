@@ -66,6 +66,9 @@ Look at the number of SNPs and INDELs in each variant calls for it to be compara
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6986837/pdf/19-1351.pdf
 
 Filter INDELS & SNPs
+
+ - Filter INDELS and SNPs using vcftools.
+
 ```
 vcftools --vcf Barcode10_var.vcf --keep-only-indels --recode --recode-INFO-all --out Barcode10_output_indels-only.vcf
  
